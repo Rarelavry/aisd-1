@@ -74,6 +74,10 @@ int main()
 		Vector<int> b2(2, -10, 10);
 		b = b2;
 	}
+	if (a == b)
+		cout << 0 << endl;
+	else 
+		cout << 1 << endl;
 	cout << a << endl << b << endl;
 	return 0;
 }

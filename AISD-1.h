@@ -7,6 +7,7 @@
 #include <stdexcept>
 #include <random>
 #include <complex>
+#include <math.h>
 
 template <typename T>
 class Vector {
@@ -154,8 +155,12 @@ public:
 
 	bool operator==(const Vector& v) {
 		for (int i = 0; i < _dimension; i++) {
-			if (_values[i] != v._values[i])
-				return false;
+			if (_values[i] - v._values[i] <0)
+				if ((_values[i] - v._values[i])*(-1)>exp(1.0))
+					return false;
+			else 
+				if (_values[i] - v._values[i] > exp(1.0))
+					return false;
 		}
 		return true;
 	}
