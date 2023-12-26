@@ -69,11 +69,7 @@ int main()
 
 	cout << endl << "Task 4" << endl;
 	Vector<int> a(2, -10, 10);
-	Vector<int> b(2, -15, 15);
-	while ( ( (a*b) / (a.vectorModule() * b.vectorModule()) )!=0) {
-		Vector<int> b2(2, -10, 10);
-		b = b2;
-	}
-	cout << a << endl << b << endl;
+	Vector<int> b = a;
+	cout << a << endl << b.perpen() << endl;
 	return 0;
 }

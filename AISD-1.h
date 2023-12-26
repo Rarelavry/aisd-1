@@ -18,13 +18,15 @@ public:
 		return _dimension;
 	}
 
-	double vectorModule() const{
-		T sum = 0;
+	Vector perpen() const {
+		T x = _values[0];
+		T y = _values[1];
 		for (int i = 0; i < _dimension; i++) {
-			T x = _values[i];
-			sum += (x * x);
+			_values[i] = 0;
 		}
-		return sqrt(sum);
+		_values[0] = y;
+		_values[1] = x*(-1);
+		return *this;
 	}
 
 	Vector(const Vector& v) {
