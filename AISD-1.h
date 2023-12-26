@@ -153,7 +153,7 @@ public:
 		return v;
 	}
 
-	bool operator==(const Vector& v) {
+	bool operator==(const T& v) {
 		for (int i = 0; i < _dimension; i++) {
 			if (_values[i] - v._values[i] <0)
 				if ((_values[i] - v._values[i])*(-1)>exp(1.0))

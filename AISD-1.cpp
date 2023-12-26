@@ -69,15 +69,11 @@ int main()
 
 	cout << endl << "Task 4" << endl;
 	Vector<int> a(2, -10, 10);
-	Vector<int> b(2, -10, 10);
+	Vector<int> b(2, -15, 15);
 	while ( ( (a*b) / (a.vectorModule() * b.vectorModule()) )!=0) {
 		Vector<int> b2(2, -10, 10);
 		b = b2;
 	}
-	if (a == b)
-		cout << 0 << endl;
-	else 
-		cout << 1 << endl;
 	cout << a << endl << b << endl;
 	return 0;
 }
